@@ -4,13 +4,15 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { CardsComponent } from './cards/cards.component';
+import { FlotComponent } from './charts/flot/flot.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     DashboardComponent,
-    CardsComponent
-],
+    CardsComponent,
+    FlotComponent
+  ],
   imports: [
     BrowserModule,
     AppRoutingModule
