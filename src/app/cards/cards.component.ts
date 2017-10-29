@@ -19,7 +19,13 @@ export class CardsComponent implements OnInit {
   }
 
   plusOne() {
-    this.router.navigate(['cards', parseInt(this.type, 10) + 1])
+    this.router.navigate(['cards', parseInt(this.type, 10) + 1], {
+      queryParams: {
+        name: 'thomas'
+      }
+    });
+
+
   }
 
 }
