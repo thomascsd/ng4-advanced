@@ -9,7 +9,7 @@ import { Router, ActivatedRoute } from '@angular/router';
 })
 export class DashboardComponent implements OnInit {
 
-  constructor(private router: Router, private route: ActivatedRoute) { }
+  constructor(private router: Router) { }
 
   ngOnInit() {
     $(initDashboard);
@@ -17,7 +17,7 @@ export class DashboardComponent implements OnInit {
 
   goCard(type: string) {
     // this.router.navigateByUrl('/cards/' + type);
-    this.router.navigate(['/cards', type]);
+    this.router.navigate(['cards', type]);
   }
 
 }
