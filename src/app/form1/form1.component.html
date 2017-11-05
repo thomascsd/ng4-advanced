@@ -1,6 +1,7 @@
 <!-- Page content-->
 <section>
   <div class="container-fluid">
+      <h5 class="mt0">Template-driven Forms</h5>
     <pre class="help-block">
     data =  {{data | json}}
     group1.value = {{group1.value | json}}
@@ -8,8 +9,6 @@
     form.vale = {{ form.value | json}}
     form.submitted = {{form.submitted}}
     </pre>
-    <h5 class="mt0">Classic form controls and custom variants</h5>
-    <p class="mb-lg">Template Form</p>
     <div class="card">
       <div class="card-body">
         <form method="get" #form="ngForm" (ngSubmit)="doSubmit(form)" class="form-horizontal">
