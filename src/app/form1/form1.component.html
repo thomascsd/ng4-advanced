@@ -10,21 +10,21 @@
       <div class="card-body">
         <form method="get" action="/" class="form-horizontal">
           <fieldset>
-            <div class="form-group">
+            <div class="form-group" [class.has-error]="mTitle.touched && mTitle.invalid">
               <label class="col-sm-2 control-label">Rounded Corners</label>
               <div class="col-sm-10">
-                <input type="text" class="form-control rounded" name="title" [(ngModel)]="data.title" #mTitle="ngModel">
+                <input type="text" class="form-control rounded" name="title" [(ngModel)]="data.title" #mTitle="ngModel" required>
               </div>
             </div>
           </fieldset>
           <fieldset>
-            <div class="form-group" [class.has-error]="mSubTitle.errors?.required">
+            <div class="form-group" [class.has-error]="mSubTitle.touched && mSubTitle.invalid">
               <label class="col-sm-2 control-label">With help</label>
               <div class="col-sm-10">
-                <input type="text" class="form-control" name="subTitle" [(ngModel)]="data.subTitle" #mSubTitle="ngModel" required>
+                <input type="text" class="form-control" name="subTitle" [(ngModel)]="data.subTitle" #mSubTitle="ngModel" required pattern="\d+">
                 <pre class="help-block">value = {{mSubTitle.value}}
                   pristine = {{mSubTitle.pristine}}
-                  dirty = {{mSubTitle.dirty}}
+                  touched = {{mSubTitle.dirty}}
                   touched = {{mSubTitle.touched}}
                   untouched = {{mSubTitle.untouched}}
                   errors = {{mSubTitle.errors | json}}
